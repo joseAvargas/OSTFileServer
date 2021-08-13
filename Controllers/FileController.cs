@@ -27,8 +27,8 @@ namespace OSTFileServer.Controllers
                 Description="Wifi Chassis In Staineless Steel VPN: MYFQ2LL/A SKU: 8HH942",
                 Status="In Transit",
                 Carrier="FedEx",
-                Ordered=100,
-                Shipped=90
+                Ordered=150,
+                Shipped=150
             },
             new OrderLine {
                 LineNumber="2.0",
@@ -60,7 +60,7 @@ namespace OSTFileServer.Controllers
             }
             catch (Exception ex)
             {
-                return Ok(ex);
+                return BadRequest(ex.Message);
             }
         }
     }
